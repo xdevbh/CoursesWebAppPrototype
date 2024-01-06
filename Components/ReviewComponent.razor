@@ -1,0 +1,21 @@
+<MudCard>
+    <MudCardHeader>
+        <CardHeaderAvatar>
+            <MudAvatar Color="Color.Secondary">@review.UserName[0]</MudAvatar>
+        </CardHeaderAvatar>
+        <CardHeaderContent>
+            <MudText Typo="Typo.body1">@review.UserName</MudText>
+            <MudText Typo="Typo.body2">@review.DateCreated</MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudStack>
+            <MudRating SelectedValue="@review.Rating" ReadOnly="true"></MudRating>
+            <MudText Typo="Typo.body1">@review.Comment</MudText>
+        </MudStack>
+    </MudCardContent>
+</MudCard>
+
+@code {
+    [Parameter] public Review review { get; set; } = new Review();
+}

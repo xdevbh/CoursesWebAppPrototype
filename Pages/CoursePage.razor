@@ -1,0 +1,89 @@
+@page "/course/{id:int}"
+<PageTitle>@title</PageTitle>
+
+<MudStack>
+    <MudImage Src="@(_course.ImagePath)" Alt="@_course.Name" Height="300" 
+              Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Cover"/>
+    <MudPaper Class="pa-4">
+        <MudText Typo="Typo.h5">@_course.Name</MudText>
+        <MudStack Justify="Justify.FlexStart" Row="true">
+            <MudChip Icon="@Icons.Material.Filled.InterpreterMode">@_course.TeacherName</MudChip>
+            <MudChip Icon="@Icons.Material.Filled.AccessTime">@_course.Duration h</MudChip>
+        </MudStack>
+        <MudRating SelectedValue="@_course.Rating" ReadOnly="true"/>
+    </MudPaper>
+    <MudPaper Class="pa-4">
+        <MudText Typo="Typo.body1">@_course.Description</MudText>
+    </MudPaper>
+    <MudPaper Class="pa-4">
+        <MudTimeline>
+            @foreach(var lesson in _lessons)
+            {
+                <MudTimelineItem>
+                    <ItemOpposite>
+                        <MudText Typo="Typo.h6">Lesson @lesson.Id</MudText>
+                        <MudText Typo="Typo.h5">@lesson.Name</MudText>
+                    </ItemOpposite>
+                    <ItemContent>
+                        <MudText>@lesson.Description</MudText>
+                    </ItemContent>
+                </MudTimelineItem>
+            }
+        </MudTimeline>
+    </MudPaper>
+    <MudPaper Class="pa-4">
+        <MudStack>
+            <MudText Typo="Typo.h6">Comments</MudText>
+            <MudCard>
+                <MudCardContent>
+                    <MudStack>
+                        <MudTextField Variant="Variant.Outlined" Label="Username" Required="true" RequiredError="Username is required!"
+                                      @bind-Value="_newReview.UserName"/>
+                        <MudRating @bind-SelectedValue="@_newReview.Rating"/>
+                        <MudTextField Variant="Variant.Outlined" T="string" Label="Write your comment here"
+                                      @bind-Value="_newReview.Comment" Lines="3"/>
+                    </MudStack>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto"
+                               OnClick="() => AddReview()">Publish</MudButton>
+                </MudCardActions>
+            </MudCard>
+            @foreach (var review in _reviews)
+            {
+                <ReviewComponent Review="@review"/>
+            }
+        </MudStack>
+    </MudPaper>
+</MudStack>
+
+
+@code {
+    [Parameter] public int Id { get; set; }
+    
+    private string title = "Course";
+
+    private Course _course = new Course();
+    private List<Lesson> _lessons = new List<Lesson>();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        _course = CoursesAccess.Instance.GetCourse(Id);
+        // _lessons = LessonsAccess.Instance.GetLessons(Id);
+        _lessons = LessonsAccess.Instance.GetAllLessons();
+        title = _course.Name + " | Course ";
+    }
+
+    List<Review> _reviews = ReviewAccess.Instance.GetAllReview().OrderByDescending(x=>x.DateCreated).ToList();
+    
+    Review _newReview = new Review();
+
+    private void AddReview()
+    {
+        _newReview.DateCreated= DateTime.Now;
+        _reviews.Add(_newReview);
+        _reviews.OrderByDescending(x=>x.DateCreated);
+        _newReview = new Review();
+    }
+}

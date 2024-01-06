@@ -1,0 +1,50 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="0">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudSpacer />
+        <MudStack Row="true">
+            <MudButton Href="" Target="_blank" Variant="Variant.Text"
+                       StartIcon="@Icons.Material.Filled.Dashboard" Style="text-transform:none" Color="Color.Inherit">
+                Discover
+            </MudButton>
+            <MudButton Href="/courses" Target="_blank" Variant="Variant.Text"
+                       StartIcon="@Icons.Material.Filled.School" Style="text-transform:none" Color="Color.Inherit">
+                Courses
+            </MudButton>
+            <MudButton Href="/statistics" Target="_blank" Variant="Variant.Text"
+                       StartIcon="@Icons.Material.Filled.BarChart" Style="text-transform:none" Color="Color.Inherit">
+                Statistics
+            </MudButton>
+            <MudButton Href="/account" Target="_blank" Variant="Variant.Text"
+                       StartIcon="@Icons.Material.Filled.AccountCircle" Style="text-transform:none" Color="Color.Inherit">
+                Account
+            </MudButton>
+        </MudStack>
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">CoursesWebApp</MudText>
+        </MudDrawerHeader>
+        <NavMenu />
+    </MudDrawer>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="pt-16">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    bool _drawerOpen = false;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}
