@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets/index.html"
     },
     {
+      "Id": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/loader.css",
+      "PackagePath": "staticwebassets/loader.css"
+    },
+    {
       "Id": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/manifest.json",
       "PackagePath": "staticwebassets/manifest.json"
     },

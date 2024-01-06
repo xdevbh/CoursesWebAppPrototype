@@ -21,8 +21,12 @@
       "url": "images\/Prague.jpg"
     },
     {
-      "hash": "sha256-UOCnzriKcXHRDrSetacMtCvQx8azS4LzEAZi1Ro+gKA=",
+      "hash": "sha256-X\/sLwsXyQw0HSPVSTfKQeqd6k3VjXtiDoy7ha1z7KIw=",
       "url": "index.html"
+    },
+    {
+      "hash": "sha256-Fxsi5pCOEfXfsS1lw8RW0M1YwLDVQZ11vYAncHBKcRU=",
+      "url": "loader.css"
     },
     {
       "hash": "sha256-2C\/k\/fjzjiLmiGzl3KLlXHkNHkMyzH3JncAweNWGqaU=",
@@ -829,15 +833,15 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-aKVh3VE5zhtm6ie1y1pnlZPrqMk960alM2HZuFjHFjw=",
+      "hash": "sha256-+dyKz2ieasoMkJLfkoRMIm+kXr9A79zL2nrgUcQ4L1Q=",
       "url": "_framework\/CoursesWebApp.dll"
     },
     {
-      "hash": "sha256-qayJuzOO1+MmMO2KSK+eNydsrE0Vs+4XQzpG8XDUM1w=",
+      "hash": "sha256-PLICJOnlZoAdfUNgu510f9MU4ADHmHEEWreQTW1r3A0=",
       "url": "_framework\/CoursesWebApp.pdb"
     },
     {
-      "hash": "sha256-dToWF8oU\/Um2Z30Tf4vCVNiy3Vkf4f5aNeZTZAFZZSw=",
+      "hash": "sha256-210ZToDKOIIijLaN4sZKSTnb0urNqZzbM+Qi9BdT42Q=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -849,5 +853,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "NglWgLWC"
+  "version": "nlnFIk+5"
 };

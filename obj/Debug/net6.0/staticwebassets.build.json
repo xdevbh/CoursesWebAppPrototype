@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xcjx0hIb+vIy7t20HvFlaMWbbl1EvRtZc+9ARQkzihI=",
+  "Hash": "wxa+kpjtKqm1h0/iXbvje3HTx7bYDrSN6nhiNdiWX0c=",
   "Source": "CoursesWebApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -7919,6 +7919,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/loader.css",
+      "SourceId": "CoursesWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "loader.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/loader.css"
     },
     {
       "Identity": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/manifest.json",
