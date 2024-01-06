@@ -1,7 +1,7 @@
 {
   "entryAssembly": "CoursesWebApp",
   "resources": {
-    "hash": "sha256-bGDcqm2Vi2tPWV/wYUzTHfNa+VYWfzagJy6aX13aGf0=",
+    "hash": "sha256-OoFJO8bwjWyTSXWvLWKdQKb+AeoELfiO3rEO7vuUO1Y=",
     "runtime": {
       "dotnet.6.0.25.i7eto5vcgh.js": "sha256-1jUGCCSGH9JWhkqbHdQk8JBjBI8K/VC63En5zlypVps=",
       "dotnet.timezones.blat": "sha256-KsGUR9nqtXb3Hy6IrNlnc1HoSS+AFlsXTX9rq4oChtA=",
@@ -203,10 +203,10 @@
       "mscorlib.dll": "sha256-veli+XvWHzkA3s4t4DKI+XiyNMpfHQjiO002+ExANkU=",
       "netstandard.dll": "sha256-O9JhHo5KqxkmwmapuxuhG/iMRV7RHcrCDO9z+yv+8yI=",
       "System.Private.CoreLib.dll": "sha256-6rKu8tPdUGsvbSpesoNMVzbx7bNqPRMPV34eI7vSYaQ=",
-      "CoursesWebApp.dll": "sha256-QSTWzAP3HDJNI7Rv/mKrpGAcaWNgXsUolIcw6w35Dt8="
+      "CoursesWebApp.dll": "sha256-0lXdZbICLYKSCZggJVJAFSp7o5cDZozA4DAHM4WStyw="
     },
     "pdb": {
-      "CoursesWebApp.pdb": "sha256-GMcwrSwEdEBs+Odr96qco+1FVuM5h1AWH2gDlrIyAXo="
+      "CoursesWebApp.pdb": "sha256-ATkoSYLNmWZiFWkZnsi1LH7lM7PI8EN6SRHGZXlxVtA="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

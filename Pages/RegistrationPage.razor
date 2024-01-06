@@ -1,0 +1,156 @@
+@page "/registration"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Registration</PageTitle>
+
+<MudGrid Justify="Justify.Center">
+    <MudItem Style="width: 500px" >
+        <MudStack Spacing="5" >
+        @if (isPart1)
+        {
+            <MudCard>
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h6">Registration</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudForm @ref="form1">
+                    <MudTextField Label="Email" Class="mt-3" Required="true" RequiredError="Email is required"
+                                  @bind-Value="_user.Email" For="@(() => _user.Email)" Variant="Variant.Outlined"/>
+                    <MudTextField Label="Password" Class="mt-3" Required="true" RequiredError="Password is required"
+                                  @bind-Value="_user.Password" For="@(() => _user.Password)" InputType="InputType.Password" Variant="Variant.Outlined"/>
+                    <MudCheckBox @bind-Value="agree" Color="Color.Primary" Required="true">I agree with rules!</MudCheckBox>
+                    </MudForm>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="() => GoToSignIn()">Sign In</MudButton>
+                    <MudSpacer/>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" 
+                               Color="Color.Primary" OnClick="() => GoToNext()">Register</MudButton>
+                </MudCardActions>
+            </MudCard>
+        }
+        @if (isPart2)
+        {
+            <MudCard>
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h6">Personal data</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudForm @ref="form2">
+                        <MudTextField Label="UserName" Required="true" RequiredError="UserName is required"
+                                      @bind-Value="_user.UserName" For="@(() => _user.UserName)" Variant="Variant.Outlined"/>
+                        <MudTextField Label="Name" Required="true" RequiredError="Name is required" Variant="Variant.Outlined"
+                                      @bind-Value="_user.Name" For="@(() => _user.Name)"/>
+                        <MudTextField Label="Surname" Class="mt-3" Required="true" RequiredError="Surname is required" Variant="Variant.Outlined"
+                                      @bind-Value="_user.Surname" For="@(() => _user.Surname)"/>
+                        <MudTextField Label="Phone number" Class="mt-3" Required="true" RequiredError="Phone number is required" Variant="Variant.Outlined"
+                                      @bind-Value="_user.PhoneNumber" For="@(() => _user.PhoneNumber)" InputType="InputType.Telephone"/>
+                    </MudForm>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="() => GoToBack()">Back</MudButton>
+                    <MudSpacer/>
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="() => GoToNext()">Next</MudButton>
+                </MudCardActions>
+            </MudCard>
+        }
+        @if (isPart3)
+        {
+            <MudCard>
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h6">Address</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudForm @ref="form3">
+                        <MudTextField Label="House №" Class="mt-3" Required="true" RequiredError="House № is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.HouseN" For="@(() => _address.HouseN)"/>
+                        <MudTextField Label="Street" Class="mt-3" Required="true" RequiredError="Street is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.Street" For="@(() => _address.Street)"/>
+                        <MudTextField Label="City" Class="mt-3" Required="true" RequiredError="City is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.City" For="@(() => _address.City)"/>
+                        <MudTextField Label="ZipCode" Class="mt-3" Required="true" RequiredError="ZipCode is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.ZipCode" For="@(() => _address.ZipCode)"/>
+                        <MudTextField Label="Country" Class="mt-3" Required="true" RequiredError="Country is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.Country" For="@(() => _address.Country)"/>
+                    </MudForm>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="() => GoToBack()">Back</MudButton>
+                    <MudSpacer/>
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="() => GoToAccount()">Register</MudButton>
+                </MudCardActions>
+            </MudCard>
+        }
+        </MudStack>
+    </MudItem>
+</MudGrid>
+
+@code {
+    
+    bool agree = false;
+    private  User _user = new User();
+    private Address _address = new Address();
+
+    MudForm form1;
+    MudForm form2;
+    MudForm form3;
+    
+    int part = 1;
+    bool isPart1 = true;
+    bool isPart2 = false;
+    bool isPart3 = false;
+
+    void GoToNext()
+    {
+        if(IsValid())
+            part++;
+        UpdatePart();
+    }
+    
+    void GoToBack()
+    {
+        part--;
+        UpdatePart();
+    }
+
+    void UpdatePart()
+    {
+        isPart1 = part == 1;
+        isPart2 = part == 2;
+        isPart3 = part == 3;
+    }
+    
+    bool IsValid()
+    {
+        switch (part)
+        {
+            case 1:
+                form1.Validate();
+                return form1.IsValid;
+            case 2:
+                form2.Validate();
+                return form2.IsValid;
+            case 3:
+                form3.Validate();
+                return form3.IsValid;
+        }
+
+        return false;
+    }
+    
+    private void GoToSignIn()
+    {
+        NavigationManager.NavigateTo($"/signin");
+    }
+    
+    private void GoToAccount()
+    {
+        NavigationManager.NavigateTo($"/account");
+    }
+}

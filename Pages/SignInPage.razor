@@ -1,0 +1,50 @@
+@page "/signin"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Registration</PageTitle>
+
+<MudGrid Justify="Justify.Center">
+    <MudItem Style="width: 500px" >
+        <MudStack Spacing="5" >
+        <MudCard>
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h6">Sign In</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudForm @ref="form1">
+                    <MudTextField Label="Email" Class="mt-3" Required="true" RequiredError="Email is required"
+                                  @bind-Value="_user.Email" For="@(() => _user.Email)" Variant="Variant.Outlined"/>
+                    <MudTextField Label="Password" Class="mt-3" Required="true" RequiredError="Password is required"
+                                  @bind-Value="_user.Password" For="@(() => _user.Password)" InputType="InputType.Password" Variant="Variant.Outlined"/>
+                </MudForm>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="() => GoToRegister()">Register</MudButton>
+                <MudSpacer/>
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" 
+                           Color="Color.Primary" OnClick="() => GoToAccount()">Sign In</MudButton>
+            </MudCardActions>
+        </MudCard>
+        </MudStack>
+    </MudItem>
+</MudGrid>
+
+@code
+{
+    MudForm form1;  
+    User _user = new User();
+
+    private void GoToRegister()
+    {
+            NavigationManager.NavigateTo("/registration");
+    }
+
+    private void GoToAccount()
+    {
+        form1.Validate();
+        if(form1.IsValid)
+            NavigationManager.NavigateTo($"/account");
+    }
+}
