@@ -2,7 +2,7 @@
 <PageTitle>@title</PageTitle>
 
 <MudStack>
-    <MudImage Src="@(_course.ImagePath)" Alt="@_course.Name" Height="300" 
+    <MudImage Src="@(_course.ImagePath)" Alt="@_course.Name" Height="300"
               Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Cover"/>
     <MudPaper Class="pa-4">
         <MudText Typo="Typo.h5">@_course.Name</MudText>
@@ -17,7 +17,7 @@
     </MudPaper>
     <MudPaper Class="pa-4">
         <MudTimeline>
-            @foreach(var lesson in _lessons)
+            @foreach (var lesson in _lessons)
             {
                 <MudTimelineItem>
                     <ItemOpposite>
@@ -46,7 +46,9 @@
                 </MudCardContent>
                 <MudCardActions>
                     <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto"
-                               OnClick="() => AddReview()">Publish</MudButton>
+                               OnClick="() => AddReview()">
+                        Publish
+                    </MudButton>
                 </MudCardActions>
             </MudCard>
             @foreach (var review in _reviews)
@@ -60,11 +62,11 @@
 
 @code {
     [Parameter] public int Id { get; set; }
-    
+
     private string title = "Course";
 
-    private Course _course = new Course();
-    private List<Lesson> _lessons = new List<Lesson>();
+    private Course _course = new();
+    private List<Lesson> _lessons = new();
 
     protected override void OnInitialized()
     {
@@ -75,15 +77,16 @@
         title = _course.Name + " | Course ";
     }
 
-    List<Review> _reviews = ReviewAccess.Instance.GetAllReview().OrderByDescending(x=>x.DateCreated).ToList();
-    
-    Review _newReview = new Review();
+    readonly List<Review> _reviews = ReviewAccess.Instance.GetAllReview().OrderByDescending(x => x.DateCreated).ToList();
+
+    Review _newReview = new();
 
     private void AddReview()
     {
-        _newReview.DateCreated= DateTime.Now;
+        _newReview.DateCreated = DateTime.Now;
         _reviews.Add(_newReview);
-        _reviews.OrderByDescending(x=>x.DateCreated);
+        _reviews.OrderByDescending(x => x.DateCreated);
         _newReview = new Review();
     }
+
 }

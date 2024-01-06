@@ -5,17 +5,16 @@ namespace CoursesWebApp.Pages;
 
 public partial class Courses
 {
-    
-    bool openFilter = false;
+    private bool openFilter;
     private Sorting sorting { get; set; } = Sorting.Popularity;
     private Languages nativeLanguages { get; set; } = Languages.All;
     private Languages targetLanguage { get; set; } = Languages.All;
-    private double? durationFrom { get; set; } = null;
-    private double? durationTo { get; set; }= null;
+    private double? durationFrom { get; set; }
+    private double? durationTo { get; set; }
 
-    private List<Course> allCourses { get; set; } = new List<Course>();
-    public List<Course> myCourses { get; set; } = new List<Course>();
-    
+    private List<Course> allCourses { get; set; } = new();
+    public List<Course> myCourses { get; set; } = new();
+
     protected override void OnInitialized()
     {
         allCourses = CoursesAccess.Instance.GetAllCourses();
@@ -26,12 +25,12 @@ public partial class Courses
         myCourses.Add(course);
         allCourses.Remove(course);
     }
-    
-    void ToggleFilterDrawer()
+
+    private void ToggleFilterDrawer()
     {
         openFilter = !openFilter;
     }
-    
+
     public void ApplyFilter()
     {
         switch (sorting)
@@ -50,15 +49,15 @@ public partial class Courses
                 break;
         }
 
-        allCourses.Where(x=> nativeLanguages == Languages.All ? true : x.NativeLanguage == nativeLanguages);
-        allCourses.Where(x=> targetLanguage == Languages.All ? true : x.TargetLanguage == targetLanguage);
-        
-        if(durationFrom != null)
-            allCourses.Where(x=>x.Duration >= durationFrom);
-        if(durationTo != null)
-            allCourses.Where(x=>x.Duration <= durationTo);
+        allCourses.Where(x => nativeLanguages == Languages.All ? true : x.NativeLanguage == nativeLanguages);
+        allCourses.Where(x => targetLanguage == Languages.All ? true : x.TargetLanguage == targetLanguage);
+
+        if (durationFrom != null)
+            allCourses.Where(x => x.Duration >= durationFrom);
+        if (durationTo != null)
+            allCourses.Where(x => x.Duration <= durationTo);
     }
-    
+
     private void GoToCourseDetails(int id)
     {
         NavigationManager.NavigateTo($"/course/{id}");

@@ -4,21 +4,11 @@ namespace CoursesWebApp.Data;
 
 public class CoursesAccess
 {
-    #region singleton
-    private static readonly CoursesAccess _instance = new CoursesAccess();
-
-    public static CoursesAccess Instance
-    {
-        get { return _instance; }
-    }
-
-    #endregion
-    
     public List<Course> GetAllCourses()
     {
         return new List<Course>
         {
-            new Course
+            new()
             {
                 Id = 1,
                 Name = "Spanish for Beginners",
@@ -31,7 +21,7 @@ public class CoursesAccess
                 Duration = 120,
                 NumberOfStudents = 100
             },
-            new Course
+            new()
             {
                 Id = 2,
                 Name = "Czech for Beginners",
@@ -42,9 +32,9 @@ public class CoursesAccess
                 ImagePath = "images/Prague.jpg",
                 TeacherName = "John Smith",
                 Duration = 120,
-                NumberOfStudents = 200  
+                NumberOfStudents = 200
             },
-            new Course
+            new()
             {
                 Id = 3,
                 Name = "Ukrainian for Beginners",
@@ -57,7 +47,7 @@ public class CoursesAccess
                 Duration = 120,
                 NumberOfStudents = 50
             },
-            new Course
+            new()
             {
                 Id = 4,
                 Name = "Чеська для початківців",
@@ -72,9 +62,15 @@ public class CoursesAccess
             }
         };
     }
-    
+
     public Course GetCourse(int id)
     {
         return GetAllCourses().FirstOrDefault(x => x.Id == id);
     }
+
+    #region singleton
+
+    public static CoursesAccess Instance { get; } = new();
+
+    #endregion
 }

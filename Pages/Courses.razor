@@ -7,14 +7,14 @@
     <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.FilterAlt" OnClick="@ToggleFilterDrawer">Filter</MudButton>
 
     <MudDrawerContainer Class="mud-height-full">
-        <MudDrawer @bind-Open="@openFilter" Width="400px" Class="pa-10" 
+        <MudDrawer @bind-Open="@openFilter" Width="400px" Class="pa-10"
                    Anchor="Anchor.End" Elevation="0" Variant="@DrawerVariant.Persistent">
             <MudDrawerHeader>
             </MudDrawerHeader>
-            <MudStack Spacing="5" >
+            <MudStack Spacing="5">
                 <MudText Typo="Typo.h6">Sorting</MudText>
-                <MudSelect @bind-Value="sorting" Label="Sort by" AdornmentColor="Color.Secondary" 
-                           Variant="Variant.Outlined"   >
+                <MudSelect @bind-Value="sorting" Label="Sort by" AdornmentColor="Color.Secondary"
+                           Variant="Variant.Outlined">
                     @foreach (Sorting item in Enum.GetValues(typeof(Sorting)))
                     {
                         <MudSelectItem Value="@item">@item</MudSelectItem>
@@ -22,14 +22,14 @@
                 </MudSelect>
                 <MudText Typo="Typo.h6">Filter</MudText>
                 <MudSelect T="Languages" @bind-Value="nativeLanguages" Label="Native language" AdornmentColor="Color.Secondary"
-                           Variant="Variant.Outlined" >
+                           Variant="Variant.Outlined">
                     @foreach (Languages item in Enum.GetValues(typeof(Languages)))
                     {
                         <MudSelectItem Value="@item">@item</MudSelectItem>
                     }
                 </MudSelect>
-                <MudSelect T="Languages" @bind-Value="targetLanguage" Label="Target language" AdornmentColor="Color.Secondary" 
-                           Variant="Variant.Outlined" >
+                <MudSelect T="Languages" @bind-Value="targetLanguage" Label="Target language" AdornmentColor="Color.Secondary"
+                           Variant="Variant.Outlined">
                     @foreach (Languages item in Enum.GetValues(typeof(Languages)))
                     {
                         <MudSelectItem Value="@item">@item</MudSelectItem>
@@ -38,10 +38,10 @@
                 <MudStack Spacing="2">
                     <MudText Typo="Typo.body1">Course duration</MudText>
                     <MudStack Row="true">
-                        <MudNumericField @bind-Value="durationFrom" Label="From" Variant="Variant.Outlined" 
-                                         Min="0.0" />
-                        <MudNumericField @bind-Value="durationTo" Label="To" Variant="Variant.Outlined" 
-                                         Min="0.0" />
+                        <MudNumericField @bind-Value="durationFrom" Label="From" Variant="Variant.Outlined"
+                                         Min="0.0"/>
+                        <MudNumericField @bind-Value="durationTo" Label="To" Variant="Variant.Outlined"
+                                         Min="0.0"/>
                     </MudStack>
                 </MudStack>
             </MudStack>
