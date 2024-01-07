@@ -79,7 +79,8 @@
                                     </MudCardContent>
                                     <MudCardActions>
                                         <MudSpacer/>
-                                        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="() => GoToCourseDetails(course.Id)">Resume</MudButton>
+                                        <MudButton Variant="Variant.Filled" Color="Color.Primary" EndIcon="@Icons.Material.Filled.PlayArrow"
+                                                   OnClick="() => GoToCourseDetails(course.Id)">Resume</MudButton>
                                     </MudCardActions>
                                 </MudCard>
                             </MudItem>
@@ -115,7 +116,8 @@
                                     <MudCardActions>
                                         <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="() => GoToCourseDetails(course.Id)">Learn More</MudButton>
                                         <MudSpacer/>
-                                        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="() => AddToMyCourses(course)">Add to my list</MudButton>
+                                        <MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add"
+                                                   OnClick="() => AddToMyCourses(course)">Add to my list</MudButton>
                                     </MudCardActions>
                                 </MudCard>
                             </MudItem>

@@ -1,0 +1,111 @@
+@page "/account"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Account</PageTitle>
+
+<MudStack Spacing="5">
+    <MudStack Row="true">
+        @if(readOnly)
+        {
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Edit"
+                               OnClick="() => Edit()">Edit</MudButton>
+        }
+        else
+        {
+            <MudButton Variant="Variant.Filled" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Save"
+                       OnClick="() => Edit()">Save</MudButton>
+        }
+        <MudSpacer/>
+        <MudButton Variant="Variant.Text" Color="Color.Error" EndIcon="@Icons.Material.Filled.Logout"
+                   OnClick="() => GoToSignIn()">Log out</MudButton>
+    </MudStack> 
+    <MudPaper Class="pa-5">
+        <MudGrid Spacing="10" Justify="Justify.Center">
+            <MudItem>
+                <MudStack Spacing="5">
+                    <MudImage Src="images/avatar.jpeg" Width="150" Height="150" Alt="avatar" Elevation="25" Class="rounded-lg"/>
+                    <MudChip Icon="@Icons.Material.Filled.AttachMoney">Free account</MudChip>
+                </MudStack>
+            </MudItem>
+            <MudItem Style="width: 700px;">
+                <MudForm @ref="form1">
+                    <MudStack >
+                        <MudText Typo="Typo.h6">Personal data</MudText>
+                        <MudTextField Label="Username" Required="true" RequiredError="Username is required"
+                                      @bind-Value="_user.UserName" Variant="Variant.Outlined" ReadOnly="@readOnly"/>
+                        <MudDivider DividerType="DividerType.Middle"/>
+                        <MudTextField Label="First name" Required="true" RequiredError="First name is required"
+                                      @bind-Value="_user.FirstName" Variant="Variant.Outlined" ReadOnly="@readOnly"/>
+                        <MudTextField Label="Last name" Required="true" RequiredError="Last name is required"
+                                      @bind-Value="_user.LastName" Variant="Variant.Outlined" ReadOnly="@readOnly"/>
+                        <MudDivider DividerType="DividerType.Middle"/>
+                        <MudText Typo="Typo.h6">Contacts</MudText>
+                        <MudTextField Label="Email" Required="true" RequiredError="Email is required"
+                                      @bind-Value="_user.Email" Variant="Variant.Outlined" ReadOnly="@readOnly"/>
+                        <MudTextField Label="Phone number" Required="true" RequiredError="Phone number is required"
+                                      @bind-Value="_user.PhoneNumber" Variant="Variant.Outlined" ReadOnly="@readOnly"/>
+                        <MudDivider DividerType="DividerType.Middle"/>
+                        <MudText Typo="Typo.h6">Address</MudText>
+                        <MudTextField Label="House №"  Required="true" RequiredError="House № is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.HouseN" ReadOnly="@readOnly"/>
+                        <MudTextField Label="Street"  Required="true" RequiredError="Street is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.Street" ReadOnly="@readOnly"/>
+                        <MudTextField Label="City"  Required="true" RequiredError="City is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.City" ReadOnly="@readOnly"/>
+                        <MudTextField Label="ZipCode"  Required="true" RequiredError="ZipCode is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.ZipCode" ReadOnly="@readOnly"/>
+                        <MudTextField Label="Country"  Required="true" RequiredError="Country is required" Variant="Variant.Outlined"
+                                      @bind-Value="_address.Country" ReadOnly="@readOnly"/>
+                    </MudStack>
+                </MudForm>
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
+    <MudCard>
+        <MudCardHeader>
+            <MudText Typo="Typo.h6">Subscription</MudText>
+        </MudCardHeader>
+        <MudCardContent>
+            <MudStack Spacing="5">
+            <MudProgressLinear Color="Color.Error" Rounded="true" Size="Size.Large" Value="10"/>
+            <MudText Typo="Typo.body1">Ends in: 2 days 12 hours 10 min</MudText>
+            </MudStack>
+        </MudCardContent>
+        <MudCardActions>
+            <MudSpacer/>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add"
+                       OnClick="() => GoToSubscription()">Renew</MudButton>
+        </MudCardActions>
+    </MudCard>
+</MudStack>
+
+@code {
+    bool readOnly = true;
+    
+    User _user = UsersAccess.Instance.GetUser(1);
+    private Address _address { get; set; }
+    
+    MudForm form1;
+    
+    public double[] data = { 75, 25 };
+    
+    protected override void OnInitialized()
+    {
+        _address = _user.Address;
+    }
+
+    private void GoToSignIn()
+    {
+        NavigationManager.NavigateTo("/signin");
+    }
+    
+    private void GoToSubscription()
+    {
+        NavigationManager.NavigateTo("/subscription");
+    }
+    
+    private void Edit()
+    {
+        readOnly = !readOnly;
+    }
+}

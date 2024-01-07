@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wxa+kpjtKqm1h0/iXbvje3HTx7bYDrSN6nhiNdiWX0c=",
+  "Hash": "k03TQAK5hVuwYmcX/rt/Ol7MF/NWYn6fPedrgVFhupo=",
   "Source": "CoursesWebApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -7843,6 +7843,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/icon-512.png"
+    },
+    {
+      "Identity": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/images/avatar.jpeg",
+      "SourceId": "CoursesWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "images/avatar.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/avatar.jpeg"
     },
     {
       "Identity": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/images/Barcelona.jpg",

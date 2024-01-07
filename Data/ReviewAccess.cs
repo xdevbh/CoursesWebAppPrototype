@@ -4,6 +4,17 @@ namespace CoursesWebApp.Data;
 
 public class ReviewAccess
 {
+    #region singleton
+    private static readonly ReviewAccess _instance = new ReviewAccess();
+
+    public static ReviewAccess Instance
+    {
+        get { return _instance; }
+    }
+
+    #endregion
+    
+    
     public List<Review> GetAllReview()
     {
         var list = new List<Review>
@@ -52,9 +63,4 @@ public class ReviewAccess
         return list;
     }
 
-    #region singleton
-
-    public static ReviewAccess Instance { get; } = new();
-
-    #endregion
 }

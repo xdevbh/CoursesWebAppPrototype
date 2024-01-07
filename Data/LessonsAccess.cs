@@ -4,6 +4,16 @@ namespace CoursesWebApp.Data;
 
 public class LessonsAccess
 {
+    #region singleton
+    private static readonly LessonsAccess _instance = new LessonsAccess();
+
+    public static LessonsAccess Instance
+    {
+        get { return _instance; }
+    }
+
+    #endregion
+    
     public List<Lesson> GetAllLessons()
     {
         var list = new List<Lesson>
@@ -72,10 +82,5 @@ public class LessonsAccess
     {
         return GetAllLessons().Where(x => x.CourseId == courseId).ToList();
     }
-
-    #region singleton
-
-    public static LessonsAccess Instance { get; } = new();
-
-    #endregion
+    
 }

@@ -6,30 +6,31 @@
 
 <MudLayout>
     <MudAppBar Elevation="0">
-        <MudHidden Breakpoint="Breakpoint.SmAndUp">
-            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@(e => DrawerToggle())"/>
-        </MudHidden>
-        <MudSpacer/>
-        <MudHidden Breakpoint="Breakpoint.Xs">
-            <MudStack Row="true">
-                <MudButton Href="" Target="_blank" Variant="Variant.Text"
+            <MudHidden Breakpoint="Breakpoint.SmAndUp">
+                <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@(e => DrawerToggle())"/>
+            </MudHidden>
+        
+            <MudHidden Breakpoint="Breakpoint.Xs">
+            
+                <MudButton Href="" Target="_blank" Variant="Variant.Text" Class="mx-2"
                            StartIcon="@Icons.Material.Filled.Dashboard" Style="text-transform:none" Color="Color.Inherit">
                     Discover
                 </MudButton>
-                <MudButton Href="/courses" Target="_blank" Variant="Variant.Text"
+                <MudButton Href="/courses" Target="_blank" Variant="Variant.Text" Class="mx-2"
                            StartIcon="@Icons.Material.Filled.School" Style="text-transform:none" Color="Color.Inherit">
                     Courses
                 </MudButton>
-                <MudButton Href="/statistics" Target="_blank" Variant="Variant.Text"
+                <MudButton Href="/statistics" Target="_blank" Variant="Variant.Text"Class="mx-2"
                            StartIcon="@Icons.Material.Filled.BarChart" Style="text-transform:none" Color="Color.Inherit">
                     Statistics
                 </MudButton>
-                <MudButton Href="/account" Target="_blank" Variant="Variant.Text"
+                <MudSpacer/>
+                <MudButton Href="/signin" Target="_blank" Variant="Variant.Text" Class="mx-2"
                            StartIcon="@Icons.Material.Filled.AccountCircle" Style="text-transform:none" Color="Color.Inherit">
                     Account
                 </MudButton>
-            </MudStack>
-        </MudHidden>
+            
+            </MudHidden>
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
         <MudDrawerHeader>
@@ -38,7 +39,7 @@
         <NavMenu/>
     </MudDrawer>
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Large" Class="pt-16">
+        <MudContainer MaxWidth="MaxWidth.Large" Class="pt-16 pb-16">
             @Body
         </MudContainer>
     </MudMainContent>

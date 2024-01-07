@@ -1,0 +1,65 @@
+@page "/subscription"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Subscription</PageTitle>
+
+<MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">Subscription</MudText>
+    <MudText Align="Align.Center">Find your best way to learn languages.</MudText>
+    <MudGrid Class="mt-8" Justify="Justify.Center">
+        <MudItem xs="12" sm="6" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Align="Align.Center">Beginner</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <div class="d-flex justify-center">
+                        <MudText Typo="Typo.h3">$100</MudText>
+                        <MudText Typo="Typo.h5" Class="ml-1 mt-5" Color="Color.Secondary">/Monthly</MudText>
+                    </div>
+                    <MudList Class="mx-auto mt-4" Style="width:300px;">
+                        <MudListItem Icon="@Icons.Material.Filled.Check">
+                            All courses
+                        </MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check">
+                            24/7 support
+                        </MudListItem>
+                    </MudList>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Style="width:50%;">Buy Now</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Align="Align.Center">Starter</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <div class="d-flex justify-center">
+                        <MudText Typo="Typo.h3">$1000</MudText>
+                        <MudText Typo="Typo.h5" Class="ml-1 mt-5" Color="Color.Secondary">/Yearly</MudText>
+                    </div>
+                    <MudList Class="mx-auto mt-4" Style="width:300px;">
+                                            <MudListItem Icon="@Icons.Material.Filled.Check">
+                                                All courses
+                                            </MudListItem>
+                                            <MudListItem Icon="@Icons.Material.Filled.Check">
+                                                24/7 support
+                                                </MudListItem>
+                    </MudList>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Style="width:50%;">Buy Now</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+
+@code {
+    
+}

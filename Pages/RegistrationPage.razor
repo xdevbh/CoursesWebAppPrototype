@@ -46,9 +46,9 @@
                             <MudTextField Label="UserName" Required="true" RequiredError="UserName is required"
                                           @bind-Value="_user.UserName" For="@(() => _user.UserName)" Variant="Variant.Outlined"/>
                             <MudTextField Label="Name" Required="true" RequiredError="Name is required" Variant="Variant.Outlined"
-                                          @bind-Value="_user.Name" For="@(() => _user.Name)"/>
+                                          @bind-Value="_user.FirstName" For="@(() => _user.FirstName)"/>
                             <MudTextField Label="Surname" Class="mt-3" Required="true" RequiredError="Surname is required" Variant="Variant.Outlined"
-                                          @bind-Value="_user.Surname" For="@(() => _user.Surname)"/>
+                                          @bind-Value="_user.LastName" For="@(() => _user.LastName)"/>
                             <MudTextField Label="Phone number" Class="mt-3" Required="true" RequiredError="Phone number is required" Variant="Variant.Outlined"
                                           @bind-Value="_user.PhoneNumber" For="@(() => _user.PhoneNumber)" InputType="InputType.Telephone"/>
                         </MudForm>

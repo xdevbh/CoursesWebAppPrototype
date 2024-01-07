@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9SZXZpZXdDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/mr_bohdan/Developer/CoursesWebApp-v2/Pages/AccountPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/mr_bohdan/Developer/CoursesWebApp-v2/Pages/CoursePage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291cnNlUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/mr_bohdan/Developer/CoursesWebApp-v2/Pages/SignInPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2lnbkluUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mr_bohdan/Developer/CoursesWebApp-v2/Pages/SubscriptionPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3Vic2NyaXB0aW9uUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/mr_bohdan/Developer/CoursesWebApp-v2/Shared/MainLayout.razor]

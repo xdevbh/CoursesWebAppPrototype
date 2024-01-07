@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets/images/Prague.jpg"
     },
     {
+      "Id": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/images/avatar.jpeg",
+      "PackagePath": "staticwebassets/images/avatar.jpeg"
+    },
+    {
       "Id": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
     },
