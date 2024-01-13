@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/CoursesWebApp.csproj": {}
+    "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/CoursesWebApp.csproj": {}
   },
   "projects": {
-    "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/CoursesWebApp.csproj": {
+    "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/CoursesWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/CoursesWebApp.csproj",
+        "projectUniqueName": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/CoursesWebApp.csproj",
         "projectName": "CoursesWebApp",
-        "projectPath": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/CoursesWebApp.csproj",
+        "projectPath": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/CoursesWebApp.csproj",
         "packagesPath": "/Users/mr_bohdan/.nuget/packages/",
-        "outputPath": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/obj/",
+        "outputPath": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mr_bohdan/.nuget/NuGet/NuGet.Config"

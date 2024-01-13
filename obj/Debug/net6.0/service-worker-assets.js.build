@@ -869,15 +869,15 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-\/WV6kuW5nYO2vl90MCelTEv3LcnEaYSlpzUS33l2U\/U=",
+      "hash": "sha256-\/qqD\/t00YNPxsfnwrzjDiCI3Ix4JaS9+Bh2iEOVfxTc=",
       "url": "_framework\/CoursesWebApp.dll"
     },
     {
-      "hash": "sha256-PpzPMzP95tJyChN0xnFz2NGr1M7353vl82rQvROJ4eM=",
+      "hash": "sha256-+YqIbFNdjVtfnJGOPu06J9s\/igKbZSJJHdtQ8za577E=",
       "url": "_framework\/CoursesWebApp.pdb"
     },
     {
-      "hash": "sha256-08pLPw2GcsJlprsG+cknCtTklXil6K9lQpfkzJR19dY=",
+      "hash": "sha256-sfe+QnEoEgL39PPlPe8gXtpYBmcrlvKjrc9Rh0Cc\/R8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -889,5 +889,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "ai3zSf1K"
+  "version": "evxiw+nF"
 };

@@ -1,91 +1,91 @@
 {
   "Files": [
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js",
       "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/obj/Debug/net6.0/compressed/drfharl3th.gz",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/obj/Debug/net6.0/compressed/drfharl3th.gz",
       "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/obj/Debug/net6.0/service-worker-assets.js",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/obj/Debug/net6.0/service-worker-assets.js",
       "PackagePath": "staticwebassets/service-worker-assets.js"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/obj/Debug/net6.0/service-worker/service-worker.published.js",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/obj/Debug/net6.0/service-worker/service-worker.published.js",
       "PackagePath": "staticwebassets/service-worker.js"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/favicon.ico",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/icon-512.png",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/icon-512.png",
       "PackagePath": "staticwebassets/icon-512.png"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/Barcelona.jpg",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/Barcelona.jpg",
       "PackagePath": "staticwebassets/images/Barcelona.jpg"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/Kyiv.jpg",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/Kyiv.jpg",
       "PackagePath": "staticwebassets/images/Kyiv.jpg"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/Prague.jpg",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/Prague.jpg",
       "PackagePath": "staticwebassets/images/Prague.jpg"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/Prague2.jpeg",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/Prague2.jpeg",
       "PackagePath": "staticwebassets/images/Prague2.jpeg"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/amazon.png",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/amazon.png",
       "PackagePath": "staticwebassets/images/amazon.png"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/avatar.jpeg",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/avatar.jpeg",
       "PackagePath": "staticwebassets/images/avatar.jpeg"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/disney.png",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/disney.png",
       "PackagePath": "staticwebassets/images/disney.png"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/fedex.png",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/fedex.png",
       "PackagePath": "staticwebassets/images/fedex.png"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/google.png",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/google.png",
       "PackagePath": "staticwebassets/images/google.png"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/logo.svg",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/logo.svg",
       "PackagePath": "staticwebassets/images/logo.svg"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/logoBlack.svg",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/images/logoBlack.svg",
       "PackagePath": "staticwebassets/images/logoBlack.svg"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/index.html",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/loader.css",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/loader.css",
       "PackagePath": "staticwebassets/loader.css"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/manifest.json",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/manifest.json",
       "PackagePath": "staticwebassets/manifest.json"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/sample-data/weather.json",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/sample-data/weather.json",
       "PackagePath": "staticwebassets/sample-data/weather.json"
     },
     {
-      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/videos/lesson.mp4",
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebAppPrototype/wwwroot/videos/lesson.mp4",
       "PackagePath": "staticwebassets/videos/lesson.mp4"
     },
     {
