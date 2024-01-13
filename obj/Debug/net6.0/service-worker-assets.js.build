@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-YPf2d2ynkllFl6UDMsGvY7djsXV1eWUog\/+Hhyb9rmo=",
+      "hash": "sha256-nTk0RiKI6rALWErRTzcwXmFty\/xaFVwiRePYCK3Ofgk=",
       "url": "favicon.ico"
     },
     {
@@ -21,7 +21,15 @@
       "url": "images\/Kyiv.jpg"
     },
     {
-      "hash": "sha256-Yj\/4F8vOCaGSJe69KyQ\/wvjWkJ3+Bgg1atsmMIticAQ=",
+      "hash": "sha256-edobqqwomzF93ZFvecaNRgWR\/lbMBm4YI617sBx8kZ4=",
+      "url": "images\/logo.svg"
+    },
+    {
+      "hash": "sha256-91R0G+IfcrBuCxcALVfxcMq3OY9cklcc7jX4LQ2KCYc=",
+      "url": "images\/logoBlack.svg"
+    },
+    {
+      "hash": "sha256-ZgPnVpT\/SrDdivfMnl0rzNJQCS8\/jQovaRdnaoHilE0=",
       "url": "images\/Prague.jpg"
     },
     {
@@ -39,6 +47,10 @@
     {
       "hash": "sha256-yzFf+O\/mlH+Q9klUSqXP2kxGKOUFLPxaww8da8fKhGU=",
       "url": "sample-data\/weather.json"
+    },
+    {
+      "hash": "sha256-7qdNG2lnJlML\/qMovctj1lcSqzLc2ytaH4XTyazfgA8=",
+      "url": "videos\/lesson.mp4"
     },
     {
       "hash": "sha256-pD9dkEr0gbzoZKvepQmzbYKQYka7z+K9H2I+m5Inpxc=",
@@ -837,15 +849,15 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-QiVVTais+FE4XfdUdvIUYG3G4Sc7H1jxnptHJQBnYys=",
+      "hash": "sha256-\/+a6FaJRmA6TbFYCtBAD79yqoKCD7dwyzh2yyMS10CE=",
       "url": "_framework\/CoursesWebApp.dll"
     },
     {
-      "hash": "sha256-QOHFJJcDLXtAneTZWuum2OqsEBo0jEbcbtMQXA5nabA=",
+      "hash": "sha256-S729xevg86aRO4UZTrhtdksC0NjxpxH1BTle9M95aiA=",
       "url": "_framework\/CoursesWebApp.pdb"
     },
     {
-      "hash": "sha256-D6R1eeCAs2azT4VrFIH+H56ih31yA07qXQL+YDwnSa0=",
+      "hash": "sha256-WqCCjnGY+si4sWyAdvC8UU9FYJ7hGJyOrZKUU1QoIkA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -857,5 +869,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "6YIRdqvT"
+  "version": "I2239kLp"
 };

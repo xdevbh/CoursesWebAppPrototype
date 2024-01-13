@@ -1,0 +1,16 @@
+<MudPaper Class="pa-5">
+    <MudStack Spacing="5">
+        <MudText Typo="Typo.body1">@Question</MudText>
+        <MudText Typo="Typo.body2">Select correct answer:</MudText>
+        <MudRadioGroup @bind-Value="@Answer">
+            <MudRadio Value="true" Color="Color.Primary" Dense="true">True</MudRadio>
+            <MudRadio Value="false" Color="Color.Secondary" Dense="false">False</MudRadio>
+        </MudRadioGroup>
+    </MudStack>
+</MudPaper>
+
+@code {
+
+    [Parameter] public string Question { get; set; } = string.Empty;
+    [Parameter] public bool Answer { get; set; } 
+}

@@ -60,6 +60,10 @@ public partial class Courses
 
     private void GoToCourseDetails(int id)
     {
+        NavigationManager.NavigateTo($"/info/course/{id}");
+    }
+    private void GoToCourse(int id)
+    {
         NavigationManager.NavigateTo($"/course/{id}");
     }
 }

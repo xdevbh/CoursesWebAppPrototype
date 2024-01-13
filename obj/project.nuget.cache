@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T1NMqWPQK6hlaYoFbkpo1bFqkiZjkcMq2cxo3QcxtkiqKRyI3Rfy1ipHkDDvdp6psBfo7rmLQzxuX8e2OGP6hA==",
+  "dgSpecHash": "zlw8OHSrqEryuO3fUPIgnNu8UdVhA6IVf5rXf7jW8QUlAqQkq7ZrMKhtOFJo/O9Aly1zzagF9qhoy2j4a6J7mA==",
   "success": true,
-  "projectFilePath": "/Users/mr_bohdan/Developer/CoursesWebApp-v2/CoursesWebApp.csproj",
+  "projectFilePath": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/CoursesWebApp.csproj",
   "expectedPackageFiles": [
     "/Users/mr_bohdan/.nuget/packages/microsoft.aspnetcore.authorization/6.0.25/microsoft.aspnetcore.authorization.6.0.25.nupkg.sha512",
     "/Users/mr_bohdan/.nuget/packages/microsoft.aspnetcore.components/6.0.25/microsoft.aspnetcore.components.6.0.25.nupkg.sha512",

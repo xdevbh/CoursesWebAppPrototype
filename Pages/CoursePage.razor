@@ -1,92 +1,164 @@
 @page "/course/{id:int}"
+@inject NavigationManager NavigationManager
+
 <PageTitle>@title</PageTitle>
 
 <MudStack>
-    <MudImage Src="@(_course.ImagePath)" Alt="@_course.Name" Height="300"
-              Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Cover"/>
     <MudPaper Class="pa-4">
-        <MudText Typo="Typo.h5">@_course.Name</MudText>
-        <MudStack Justify="Justify.FlexStart" Row="true">
-            <MudChip Icon="@Icons.Material.Filled.InterpreterMode">@_course.TeacherName</MudChip>
-            <MudChip Icon="@Icons.Material.Filled.AccessTime">@_course.Duration h</MudChip>
-        </MudStack>
-        <MudRating SelectedValue="@_course.Rating" ReadOnly="true"/>
-    </MudPaper>
-    <MudPaper Class="pa-4">
-        <MudText Typo="Typo.body1">@_course.Description</MudText>
-    </MudPaper>
-    <MudPaper Class="pa-4">
-        <MudTimeline>
-            @foreach (var lesson in _lessons)
-            {
-                <MudTimelineItem>
-                    <ItemOpposite>
-                        <MudText Typo="Typo.h6">Lesson @lesson.Id</MudText>
-                        <MudText Typo="Typo.h5">@lesson.Name</MudText>
-                    </ItemOpposite>
-                    <ItemContent>
-                        <MudText>@lesson.Description</MudText>
-                    </ItemContent>
-                </MudTimelineItem>
-            }
-        </MudTimeline>
-    </MudPaper>
-    <MudPaper Class="pa-4">
-        <MudStack>
-            <MudText Typo="Typo.h6">Comments</MudText>
-            <MudCard>
-                <MudCardContent>
-                    <MudStack>
-                        <MudTextField Variant="Variant.Outlined" Label="Username" Required="true" RequiredError="Username is required!"
-                                      @bind-Value="_newReview.UserName"/>
-                        <MudRating @bind-SelectedValue="@_newReview.Rating"/>
-                        <MudTextField Variant="Variant.Outlined" T="string" Label="Write your comment here"
-                                      @bind-Value="_newReview.Comment" Lines="3"/>
-                    </MudStack>
-                </MudCardContent>
-                <MudCardActions>
-                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto"
-                               OnClick="() => AddReview()">
-                        Publish
-                    </MudButton>
-                </MudCardActions>
-            </MudCard>
-            @foreach (var review in _reviews)
-            {
-                <ReviewComponent Review="@review"/>
-            }
+        <MudStack Row="true">
+            <MudStack>
+                <MudText Typo="Typo.h4">@_course.Name</MudText>
+                <MudStack Justify="Justify.FlexStart" Row="true">
+                    <MudChip Icon="@Icons.Material.Filled.InterpreterMode">@_course.TeacherName</MudChip>
+                    <MudChip Icon="@Icons.Material.Filled.AccessTime">@_course.Duration h</MudChip>
+                </MudStack>
+            </MudStack>
+            <MudSpacer/>
+            <MudIconButton Icon="@Icons.Material.Outlined.Info" aria-label="Info" OnClick="() => GoToCourseDetails(_course.Id)"/>
         </MudStack>
     </MudPaper>
+    <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.FormatListBulleted" OnClick="()=>ToggleLessonsDrawer()">@lessonDrawerText</MudButton>
+    <MudDrawerContainer Class="mud-height-full">
+        <MudDrawer @bind-Open="@openLessonsList" Width="400px" Class="pa-5"
+                   Anchor="Anchor.End" Elevation="0" Variant="@DrawerVariant.Persistent">
+            <MudDrawerHeader>
+                <MudText Typo="Typo.h5">Lessons</MudText>
+            </MudDrawerHeader>
+            <MudList Clickable="true" @bind-SelectedItem="selectedItem" @bind-SelectedValue="selectedValue">
+                @foreach(var lesson in _lessons)
+                {
+                    if (lesson.isDone)
+                    {
+                        <MudListItem Icon="@Icons.Material.Filled.CheckCircle" IconColor="Color.Success" 
+                                     Value="lesson.Id">
+                            <b>Lesson @lesson.Id:</b> @lesson.Name
+                        </MudListItem>
+                    }
+                    else
+                    {
+                        <MudListItem Icon="@Icons.Material.Outlined.PlayCircle" Value="lesson.Id">
+                            <b>Lesson @lesson.Id:</b> @lesson.Name
+                        </MudListItem>
+                    }
+                }
+            </MudList>
+        </MudDrawer>
+        
+        <MudStack Spacing="10">
+            @if (isPart1)
+            {
+                <MudCard>
+                    <MudCardContent>
+                        <video width="100%" height="100%" controls>
+                            <source src="videos/lesson.mp4" type="video/mp4">
+                        </video>
+                        <MudText Typo="Typo.h6">@_lesson.Name</MudText>
+                        <MudText Typo="Typo.body1">@_lesson.Description</MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudSpacer/>
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" 
+                                   EndIcon="@Icons.Material.Filled.NavigateNext" OnClick="() => GoNext()">Next</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            }
+            @if (isPart2)
+            {
+                <MudCard>
+                    <MudCardContent>
+                        <MudStack Spacing="5">
+                            @for (int i = 0; i < 5; i++)
+                            {
+                                <TestTrueFalseComponent Question="Lorem ipsum dolor sit amet, consectetur adipiscing elit?"/>
+                            }
+                        </MudStack>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" 
+                                   StartIcon="@Icons.Material.Filled.NavigateBefore" OnClick="() => GoBack()">Back</MudButton>
+                        <MudSpacer/>
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" 
+                                   StartIcon="@Icons.Material.Filled.Check">Check answers</MudButton>
+                        
+                    </MudCardActions>
+                </MudCard>
+            }
+        </MudStack>
+    </MudDrawerContainer>
 </MudStack>
 
 
 @code {
+    
     [Parameter] public int Id { get; set; }
 
     private string title = "Course";
 
     private Course _course = new();
     private List<Lesson> _lessons = new();
-
+    private Lesson _lesson = new();
+    
+    object selectedValue = 1;
+    MudListItem selectedItem;
+    
+    private bool openLessonsList = true;
+    private string lessonDrawerText = String.Empty;
+    
+    int part = 1;
+    bool isPart1;
+    bool isPart2;
+    
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        SetLessonDrawerText();
         _course = CoursesAccess.Instance.GetCourse(Id);
         // _lessons = LessonsAccess.Instance.GetLessons(Id);
         _lessons = LessonsAccess.Instance.GetAllLessons();
         title = _course.Name + " | Course ";
+        _lesson = _lessons[(int)selectedValue];
+        
+        UpdatePart();
     }
-
-    readonly List<Review> _reviews = ReviewAccess.Instance.GetAllReview().OrderByDescending(x => x.DateCreated).ToList();
-
-    Review _newReview = new();
-
-    private void AddReview()
+    
+    private void GoToCourseDetails(int id)
     {
-        _newReview.DateCreated = DateTime.Now;
-        _reviews.Add(_newReview);
-        _reviews.OrderByDescending(x => x.DateCreated);
-        _newReview = new Review();
+        NavigationManager.NavigateTo($"/info/course/{id}");
     }
 
+    private void SetLessonDrawerText()
+    {
+        if (openLessonsList)
+        {
+            lessonDrawerText = "Hide Lessons";
+        }
+        else
+        {
+            lessonDrawerText = "Show Lessons";
+        }
+    }
+    
+    private void ToggleLessonsDrawer()
+    {
+        openLessonsList = !openLessonsList;
+        SetLessonDrawerText();
+    }
+    
+    void UpdatePart()
+    {
+        isPart1 = part == 1;
+        isPart2 = part == 2;
+    }
+
+    private void GoNext()
+    {
+        part++;
+        UpdatePart();
+    }
+    
+    private void GoBack()
+    {
+        part--;
+        UpdatePart();
+    }
 }

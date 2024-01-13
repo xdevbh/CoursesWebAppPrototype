@@ -9,4 +9,6 @@ public class Lesson
     public string VideoPath { get; set; } = string.Empty;
     public string ImagePath { get; set; } = string.Empty;
     public double Duration { get; set; }
+    
+    public bool isDone { get; set; } = false;
 }

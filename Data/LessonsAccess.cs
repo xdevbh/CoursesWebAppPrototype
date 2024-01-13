@@ -27,7 +27,8 @@ public class LessonsAccess
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel auctor est, id ullamcorper nunc. Nam tincidunt nunc quis erat egestas cursus. Donec tincidunt a enim ac gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus efficitur lectus nec mollis lobortis. ",
                 VideoPath = "/Videos/EnglishCzechLesson1.mp4",
                 ImagePath = "/Images/EnglishCzechLesson1.jpg",
-                Duration = 2
+                Duration = 2,
+                isDone = true
             },
             new()
             {

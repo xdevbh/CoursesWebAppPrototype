@@ -9,32 +9,27 @@
             <MudHidden Breakpoint="Breakpoint.SmAndUp">
                 <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@(e => DrawerToggle())"/>
             </MudHidden>
-        
             <MudHidden Breakpoint="Breakpoint.Xs">
-            
-                <MudButton Href="" Target="_blank" Variant="Variant.Text" Class="mx-2"
+                <a href="/"><MudImage Src="images/logo.svg" Alt="Logo" Height="70"/></a>
+                <MudButton Href="" Variant="Variant.Text" Class="mx-2"
                            StartIcon="@Icons.Material.Filled.Dashboard" Style="text-transform:none" Color="Color.Inherit">
                     Discover
                 </MudButton>
-                <MudButton Href="/courses" Target="_blank" Variant="Variant.Text" Class="mx-2"
+                <MudButton Href="/courses" Variant="Variant.Text" Class="mx-2"
                            StartIcon="@Icons.Material.Filled.School" Style="text-transform:none" Color="Color.Inherit">
                     Courses
                 </MudButton>
-                <MudButton Href="/statistics" Target="_blank" Variant="Variant.Text"Class="mx-2"
-                           StartIcon="@Icons.Material.Filled.BarChart" Style="text-transform:none" Color="Color.Inherit">
-                    Statistics
-                </MudButton>
                 <MudSpacer/>
-                <MudButton Href="/signin" Target="_blank" Variant="Variant.Text" Class="mx-2"
+                <MudButton Href="/signin"    Variant="Variant.Text" Class="mx-2"
                            StartIcon="@Icons.Material.Filled.AccountCircle" Style="text-transform:none" Color="Color.Inherit">
                     Account
                 </MudButton>
-            
+
             </MudHidden>
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
         <MudDrawerHeader>
-            <MudText Typo="Typo.h6">CoursesWebApp</MudText>
+            <MudImage Src="images/logoBlack.svg" Alt="Logo" Height="70"/>
         </MudDrawerHeader>
         <NavMenu/>
     </MudDrawer>
