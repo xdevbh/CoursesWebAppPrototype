@@ -1,12 +1,152 @@
 ﻿@page "/"
+@inject NavigationManager NavigationManager
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Discover</PageTitle>
 
-<MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
-<MudText Class="mb-8">Welcome to your new app, powered by MudBlazor!</MudText>
-<MudAlert Severity="Severity.Normal">
-    You can find documentation and examples on our website here:
-    <MudLink Href="https://mudblazor.com" Typo="Typo.body2" Color="Color.Inherit">
-        <b>www.mudblazor.com</b>
-    </MudLink>
-</MudAlert>
+<MudStack Spacing="10">
+    @* carousel with info *@
+    <MudCarousel Class="mud-width-full" Style="height:400px;" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="true" TData="object">
+        <MudCarouselItem Transition="Transition.Slide" Color="@Color.Surface">
+            <MudImage Src="@($"https://picsum.photos/id/24/2000/400/?blur=5")" Alt="Some picture" Height="400"
+                      Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Fill"/>
+            <MudStack Style="margin: -200px">
+                <MudText Typo="Typo.h6" Align="Align.Center" >'Language is the archives of history.'</MudText>
+                <MudText Typo="Typo.body1" Align="Align.Center"> - Ralph Waldo Emerson</MudText>
+            </MudStack>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="Transition.Slide" Color="@Color.Secondary">
+            <MudImage Src="@($"https://picsum.photos/id/541/2000/400/?blur=5")" Alt="Some picture" Height="400"
+                      Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Fill"/>
+            <MudStack Style="margin: -200px">
+                <MudText Typo="Typo.h6" Align="Align.Center" >'Language reflects the soul of people.'</MudText>
+                <MudText Typo="Typo.body1" Align="Align.Center"> - Paul Schibler</MudText>
+            </MudStack>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="Transition.Slide" Color="@Color.Tertiary">
+            <MudImage Src="@($"https://picsum.photos/id/596/2000/400/?blur=5")" Alt="Some picture" Height="400"
+                      Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Fill"/>
+            <MudStack Style="margin: -200px">
+                <MudText Typo="Typo.h6" Align="Align.Center" >'A different language is a different vision of life.'</MudText>
+                <MudText Typo="Typo.body1" Align="Align.Center"> - Federico Fellini</MudText>
+            </MudStack>
+        </MudCarouselItem>
+    </MudCarousel>
+
+    @* cards with courses *@
+    <MudDivider DividerType="DividerType.Inset"/>
+    <MudText Typo="Typo.h4" Align="Align.Center">Our popular courses</MudText>
+    @if (allCourses.Count == 0)
+    {
+        <MudText Typo="Typo.body1">There are no courses yet</MudText>
+    }
+    @if (allCourses.Count != 0)
+    {
+        <MudGrid Spacing="5" Justify="Justify.Center">
+            @foreach (var course in allCourses)
+            {
+                <MudItem Style="width: 400px">
+                    <MudCard>
+                        <MudCardMedia Image="@course.ImagePath" Height="200"/>
+                        <MudCardContent>
+                            <MudStack>
+                                <MudText Typo="Typo.h6">@course.Name</MudText>
+                                <MudRating SelectedValue="@course.Rating" ReadOnly="true"/>
+                                <MudStack Justify="Justify.FlexStart" Row="true">
+                                    <MudChip Icon="@Icons.Material.Filled.InterpreterMode">@course.TeacherName</MudChip>
+                                    <MudChip Icon="@Icons.Material.Filled.AccessTime">@course.Duration h</MudChip>
+                                </MudStack>
+                                <MudText Typo="Typo.body1">@course.Description</MudText>
+                            </MudStack>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="() => GoToCourseDetails(course.Id)">Learn More</MudButton>
+                            <MudSpacer/>
+                        </MudCardActions>
+                    </MudCard>
+                </MudItem>
+            }
+        </MudGrid>
+    }
+
+    <MudDivider DividerType="DividerType.Inset"/>
+    @* cards with partners *@
+    <MudText Typo="Typo.h4" Align="Align.Center">Our partners</MudText>
+    <MudGrid Justify="Justify.Center">
+        <MudItem>
+            <MudImage Src="images/google.png" Alt="Google" Height="100" Width="200"
+                      Elevation="25" ObjectFit="ObjectFit.Contain"/>
+        </MudItem>
+        <MudItem>
+            <MudImage Src="images/fedex.png" Alt="FedEx" Height="100" Width="200"
+                      Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Contain"/>
+        </MudItem>
+        <MudItem>
+            <MudImage Src="images/disney.png" Alt="Disney" Height="100" Width="200"
+                      Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Contain"/>
+        </MudItem>
+        <MudItem>
+            <MudImage Src="images/amazon.png" Alt="Amazon" Height="100" Width="200"
+                      Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Contain"/>
+        </MudItem>
+    </MudGrid>
+
+
+    @* citation of the day *@
+    <MudDivider DividerType="DividerType.Inset"/>
+    <MudPaper Class="pa-5 mud-theme-primary">
+        <MudStack Spacing="5">
+            <MudText Typo="Typo.body2" Align="Align.Center">Word of the Day</MudText>
+            <MudText Typo="Typo.h6" Align="Align.Center">gargoyleplay</MudText>
+            <MudText Typo="Typo.body1" Align="Align.Center">A gargoyle is a strange or grotesque human or animal figure that sticks out from the roof of a building (such as a church) and is used to cause rainwater to flow away from the building's sides.</MudText>
+        </MudStack>
+    </MudPaper>
+
+
+    @* cards with news *@
+    <MudDivider DividerType="DividerType.Inset"/>
+    <MudText Typo="Typo.h4" Align="Align.Center">News</MudText>
+    <MudGrid Spacing="5" Justify="Justify.Center">
+        @for (int i = 0; i < 3; i++)
+        {
+            <MudItem Style="width: 400px">
+                <MudCard>
+                    <MudCardMedia Image="@($"https://picsum.photos/seed/{_random.Next(1000)}/200/200/?blur=1")" Height="200"/>
+                    <MudCardContent>
+                        <MudStack>
+                            <MudText Typo="Typo.h6">Lorem Ipsum</MudText>
+                            <MudText Typo="Typo.body2">1 hour ago</MudText>
+                            <MudText Typo="Typo.body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non aliquam tortor. Aliquam tincidunt turpis ut nisi semper, sit amet ornare neque interdum.</MudText>
+                        </MudStack>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudSpacer/>
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="() => GoToNews()">Read More</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+        }
+    </MudGrid>
+</MudStack>
+
+
+@code
+{
+    private List<Course> allCourses { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        allCourses = CoursesAccess.Instance.GetAllCourses().OrderBy(x => x.NumberOfStudents).Take(3).ToList();
+    }
+
+    private void GoToCourseDetails(int id)
+    {
+        NavigationManager.NavigateTo($"/info/course/{id}");
+    }
+
+    private void GoToNews()
+    {
+        NavigationManager.NavigateTo($"https://www.bbc.com/");
+    }
+
+    Random _random = new Random();
+}

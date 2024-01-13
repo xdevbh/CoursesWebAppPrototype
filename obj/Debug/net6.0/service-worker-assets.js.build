@@ -9,12 +9,28 @@
       "url": "icon-512.png"
     },
     {
+      "hash": "sha256-wggGI6tBbVUZo8VTBfUdBhlhWy0DFU1dOe2x2fxO2Cw=",
+      "url": "images\/amazon.png"
+    },
+    {
       "hash": "sha256-vQfZPPaI0XGmk0M3vKsJH8dHiZAUKLK8t9oo7rXTbNQ=",
       "url": "images\/avatar.jpeg"
     },
     {
       "hash": "sha256-xEYeES+0dn8A3aqbma8PaQCTS7q4EWqBt\/21fFWLOcI=",
       "url": "images\/Barcelona.jpg"
+    },
+    {
+      "hash": "sha256-g\/hGfIXck9BwZdLbc96sZvBfNsrjmbhLQCIpq0txRcY=",
+      "url": "images\/disney.png"
+    },
+    {
+      "hash": "sha256-HXpw6P9H\/no1yfdV3wdknYWszJjsAc7Q5efOWqvomCw=",
+      "url": "images\/fedex.png"
+    },
+    {
+      "hash": "sha256-ZjvGtfZgaIXxEYACEXv32qXK6gvHJp0YoBb1deEZ83w=",
+      "url": "images\/google.png"
     },
     {
       "hash": "sha256-hs6C+cfnE5fh9qkTJtLOZA66gZ81Pq39ELa+KwLS7hc=",
@@ -31,6 +47,10 @@
     {
       "hash": "sha256-ZgPnVpT\/SrDdivfMnl0rzNJQCS8\/jQovaRdnaoHilE0=",
       "url": "images\/Prague.jpg"
+    },
+    {
+      "hash": "sha256-gF2l4GhvjBFpxBhrVYFv9vra6dBrRRTBDKOjm68r\/vg=",
+      "url": "images\/Prague2.jpeg"
     },
     {
       "hash": "sha256-X\/sLwsXyQw0HSPVSTfKQeqd6k3VjXtiDoy7ha1z7KIw=",
@@ -849,15 +869,15 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-\/+a6FaJRmA6TbFYCtBAD79yqoKCD7dwyzh2yyMS10CE=",
+      "hash": "sha256-\/WV6kuW5nYO2vl90MCelTEv3LcnEaYSlpzUS33l2U\/U=",
       "url": "_framework\/CoursesWebApp.dll"
     },
     {
-      "hash": "sha256-S729xevg86aRO4UZTrhtdksC0NjxpxH1BTle9M95aiA=",
+      "hash": "sha256-PpzPMzP95tJyChN0xnFz2NGr1M7353vl82rQvROJ4eM=",
       "url": "_framework\/CoursesWebApp.pdb"
     },
     {
-      "hash": "sha256-WqCCjnGY+si4sWyAdvC8UU9FYJ7hGJyOrZKUU1QoIkA=",
+      "hash": "sha256-08pLPw2GcsJlprsG+cknCtTklXil6K9lQpfkzJR19dY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -869,5 +889,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "I2239kLp"
+  "version": "ai3zSf1K"
 };

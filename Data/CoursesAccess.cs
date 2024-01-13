@@ -66,7 +66,7 @@ public class CoursesAccess
                 NativeLanguage = Languages.Ukrainian,
                 TargetLanguage = Languages.Czech,
                 Description = "Цей курс для початківців, які хочуть вивчити чеську.",
-                ImagePath = "images/Prague.jpg",
+                ImagePath = "images/Prague2.jpeg",
                 TeacherName = "John Smith",
                 Duration = 120,
                 NumberOfStudents = 500

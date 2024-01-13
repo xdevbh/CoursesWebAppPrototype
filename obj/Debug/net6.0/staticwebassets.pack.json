@@ -37,8 +37,28 @@
       "PackagePath": "staticwebassets/images/Prague.jpg"
     },
     {
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/Prague2.jpeg",
+      "PackagePath": "staticwebassets/images/Prague2.jpeg"
+    },
+    {
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/amazon.png",
+      "PackagePath": "staticwebassets/images/amazon.png"
+    },
+    {
       "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/avatar.jpeg",
       "PackagePath": "staticwebassets/images/avatar.jpeg"
+    },
+    {
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/disney.png",
+      "PackagePath": "staticwebassets/images/disney.png"
+    },
+    {
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/fedex.png",
+      "PackagePath": "staticwebassets/images/fedex.png"
+    },
+    {
+      "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/google.png",
+      "PackagePath": "staticwebassets/images/google.png"
     },
     {
       "Id": "/Users/mr_bohdan/Developer/CZU-InteractiveDesign/CoursesWebApp-v2/wwwroot/images/logo.svg",

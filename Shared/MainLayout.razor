@@ -6,26 +6,28 @@
 
 <MudLayout>
     <MudAppBar Elevation="0">
-            <MudHidden Breakpoint="Breakpoint.SmAndUp">
-                <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@(e => DrawerToggle())"/>
-            </MudHidden>
-            <MudHidden Breakpoint="Breakpoint.Xs">
-                <a href="/"><MudImage Src="images/logo.svg" Alt="Logo" Height="70"/></a>
-                <MudButton Href="" Variant="Variant.Text" Class="mx-2"
-                           StartIcon="@Icons.Material.Filled.Dashboard" Style="text-transform:none" Color="Color.Inherit">
-                    Discover
-                </MudButton>
-                <MudButton Href="/courses" Variant="Variant.Text" Class="mx-2"
-                           StartIcon="@Icons.Material.Filled.School" Style="text-transform:none" Color="Color.Inherit">
-                    Courses
-                </MudButton>
-                <MudSpacer/>
-                <MudButton Href="/signin"    Variant="Variant.Text" Class="mx-2"
-                           StartIcon="@Icons.Material.Filled.AccountCircle" Style="text-transform:none" Color="Color.Inherit">
-                    Account
-                </MudButton>
+        <MudHidden Breakpoint="Breakpoint.SmAndUp">
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@(e => DrawerToggle())"/>
+        </MudHidden>
+        <MudHidden Breakpoint="Breakpoint.Xs">
+            <a href="/">
+                <MudImage Src="images/logo.svg" Alt="Logo" Height="70"/>
+            </a>
+            <MudButton Href="/" Variant="Variant.Text" Class="mx-2"
+                       StartIcon="@Icons.Material.Filled.Dashboard" Style="text-transform:none" Color="Color.Inherit">
+                Discover
+            </MudButton>
+            <MudButton Href="/courses" Variant="Variant.Text" Class="mx-2"
+                       StartIcon="@Icons.Material.Filled.School" Style="text-transform:none" Color="Color.Inherit">
+                Courses
+            </MudButton>
+            <MudSpacer/>
+            <MudButton Href="/signin" Variant="Variant.Text" Class="mx-2"
+                       StartIcon="@Icons.Material.Filled.AccountCircle" Style="text-transform:none" Color="Color.Inherit">
+                Account
+            </MudButton>
 
-            </MudHidden>
+        </MudHidden>
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
         <MudDrawerHeader>
@@ -36,6 +38,13 @@
     <MudMainContent>
         <MudContainer MaxWidth="MaxWidth.Large" Class="pt-16 pb-16">
             @Body
+        </MudContainer>
+        <MudContainer>
+            <MudStack Class="pb-10">
+                <MudDivider DividerType="DividerType.Inset"/>
+                <MudText Typo="Typo.body1" Align="Align.Center">Copyright © 2024 A-Course</MudText>
+                <MudText Typo="Typo.body1" Align="Align.Center">School project</MudText>
+            </MudStack>
         </MudContainer>
     </MudMainContent>
 </MudLayout>
