@@ -8,13 +8,24 @@
               Elevation="25" Class="rounded-lg" ObjectFit="ObjectFit.Cover"/>
         <MudCard>
             <MudCardContent>
-                <MudStack >
-                    <MudText Typo="Typo.h4">@_course.Name</MudText>
-                    <MudStack Justify="Justify.FlexStart" Row="true">
-                        <MudChip Icon="@Icons.Material.Filled.InterpreterMode">@_course.TeacherName</MudChip>
-                        <MudChip Icon="@Icons.Material.Filled.AccessTime">@_course.Duration h</MudChip>
+                <MudStack Row="true">
+                    <MudStack >
+                        <MudText Typo="Typo.h4">@_course.Name</MudText>
+                        <MudStack Justify="Justify.FlexStart" Row="true">
+                            <MudChip Icon="@Icons.Material.Filled.InterpreterMode">@_course.TeacherName</MudChip>
+                            <MudChip Icon="@Icons.Material.Filled.AccessTime">@_course.Duration h</MudChip>
+                        </MudStack>
+                        <MudRating SelectedValue="@_course.Rating" ReadOnly="true"/>
                     </MudStack>
-                    <MudRating SelectedValue="@_course.Rating" ReadOnly="true"/>
+                    <MudSpacer/>
+                    <MudStack>
+                        <MudSpacer/>
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto"
+                                   OnClick="() => GoToCourse(_course.Id)" EndIcon="@Icons.Material.Filled.PlayArrow">
+                            Enroll
+                        </MudButton>
+                        <MudSpacer/>
+                    </MudStack>
                 </MudStack>
             </MudCardContent>
         </MudCard>
@@ -22,19 +33,7 @@
     <MudPaper Class="pa-4">
         <MudText Typo="Typo.body1">@_course.Description</MudText>
         <MudText Typo="Typo.body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel auctor est, id ullamcorper nunc. Nam tincidunt nunc quis erat egestas cursus. Donec tincidunt a enim ac gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus efficitur lectus nec mollis lobortis.</MudText>
-        </MudPaper>
-    <MudCard>
-        <MudCardContent>
-            <MudText Typo="Typo.body1">@_course.NumberOfStudents students enrolled in the course.</MudText>
-            <MudText Typo="Typo.body1">Would you like to enroll, too?</MudText>
-        </MudCardContent>
-        <MudCardActions>
-        <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto"
-                   OnClick="() => GoToCourse(_course.Id)" EndIcon="@Icons.Material.Filled.PlayArrow">
-            Enroll
-        </MudButton>
-        </MudCardActions>
-    </MudCard>
+    </MudPaper>
     <MudPaper Class="pa-4">
         <MudTimeline>
             @foreach (var lesson in _lessons)
